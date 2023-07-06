@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+   
+    background: linear-gradient(to right,rgb(0, 0, 0),rgb(34, 34, 34));
+}
+.main h1{
+    font-family:  Silkscreen;
+    color: white;
+    font-size:13rem;
+    text-align: center;
+    color: rgb(20, 19, 19);
+    margin: 0;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(17, 17, 17);
+    padding: 0;
+    letter-spacing: 0.3rem;
+}
+div.box{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 30rem;
+    /* border: 1px dashed rgb(28, 56, 145); */
+    border-radius: 10px;
+    width: 22rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    /* outline-top: 5px solid rgb(72, 97, 235); */
+    box-shadow: 14px 0px 20px 1px rgba(2, 2, 2, 0.686),inset 3px 3px 33px rgb(38, 39, 41);
+    gap: 20px;
+    text-align: center;
+    background-color: white;
+    background: linear-gradient(to bottom,rgb(22, 22, 23),rgb(49, 49, 52),rgb(39, 40, 41));
+    /* background:linear-gradient(to right, rgb(72, 97, 235)); */
+}
+.box h1
+{font-family:sigmar;
+    position:relative;
+    /* top:-3%; */
+    font-size: 1.7rem;
+    color: white;
+    /* box-shadow: inset 5px 4px 10px rgb(0, 0, 0),inset -1px -1px 3px rgb(0, 0, 0); */
+    letter-spacing: normal;
+    /* border: 1px soid white;
+    -webkit-text-stroke-color: none;
+    background-color: rgb(41, 39, 39); */
+    padding: 5px 20px;
+    display: flex;
+    align-self: center;
+    -webkit-text-stroke: 1px rgb(41, 39, 39);
+    border-radius: 10px;
+    transition:opacity all 1s;
+    opacity: 0;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    opacity: 0.4;
+}
+.box h3
+{font-family:gochi hand;
+/* display: flex;
+justify-content: center; */
+    font-weight: 100;
+    font-size: 1.4rem;
+    text-align: right;
+    position: relative;
+    /* right: -76px; */
+    /* width: 160px; */
+    padding: 2px 15px;
+    /* background-color: rgb(64, 61, 61); */
+    border-radius: 20px;
+    /* border-bottom-left-radius: 0; */
+    border-top-right-radius: 0;
+    /* border-top-left-radius: 0; */
+    top: -15px;
+    color: gray;
+    opacity: 0.4;
+    /* width: 60%; */
+}
+.musicImage{
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+     background-image: url(1.jpg); 
+     background-position: center;
+    background-size: cover; 
+    border-radius: 50%;
+    transition: 0.5s linear ease;
+    box-shadow: 0px 0px 10px black;
+    opacity: 0.4;
+}
+.anime{
+    animation: musicrotation linear 3s infinite;
+}
+/* .musicImage:hover{
+    animation: none;
+} */
+@keyframes musicrotation {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.musicControls{
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    flex-flow: row;
+}
+.musicControls i{
+    color: white;
+    font-size: 25px;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.musicControls i:hover
+{
+    color: rgb(197, 197, 197);
+filter:drop-shadow( 1px 2px 8px black);
+}.musicControls i#play{
+    font-size: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all;
+border: 1px solid;
+border-radius: 50%;
+color: black;
+height:40px;
+color: white;
+width: 40px;
+font-size: 20px;
+color: rgb(55, 53, 53);
+background-color: white;
+}
+.fa-pause{
+    height:40px;
+    color: white;
+    width: 40px;
+    font-size: 30px;
+    padding: auto;
+    color: rgb(55, 53, 53);
+    background-color: white;
+}
+
+.musicControls i#play:hover{
+    border: 1px solid;
+    /* font-size: 30px; */
+    background-color: rgb(37, 33, 33);
+    color: rgb(255, 247, 247);
+filter:drop-shadow( 1px 2px 8px black);
+}
+@media screen and (max-width:666px) {
+    .main .box{
+        height: 25rem;
+        width: 19rem;
+    }
+    .main .box h1{
+        font-size: 1.5rem;
+    }
+    .main .box h3{
+        font-size: 1.2rem;
+    }
+    .main .box .musicImage{
+        height: 150px;
+        width: 150px;
+    }
+    .musicControls i{
+        font-size: 1.2rem;
+    }
+}
